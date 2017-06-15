@@ -20,6 +20,8 @@ class GameViewController: UIViewController {
     
     var ballNode: SCNNode!
     
+    var paddleNode: SCNNode!
+    
     override func viewDidLoad() {
         
         setupScene()
@@ -42,6 +44,8 @@ class GameViewController: UIViewController {
         verticalCameraNode = scnScene.rootNode.childNode(withName: "VerticalCamera", recursively: true)!
         
         ballNode = scnScene.rootNode.childNode(withName: "Ball", recursively: true)!
+        
+        paddleNode = scnScene.rootNode.childNode(withName: "Paddle", recursively: true)!
     }
     
     func setupSounds() {
